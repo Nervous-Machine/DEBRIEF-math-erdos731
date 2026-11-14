@@ -1,0 +1,300 @@
+{
+ "missions": [
+  {
+   "schema_version": "nm-debrief-v1",
+   "created_by": "DEBRIEF/tools/new_mission.py",
+   "created_at": "2026-11-14T20:49:24Z",
+   "mission_id": "erdos731-2026-11",
+   "pod": "DEBRIEF-math-erdos731",
+   "provenance": {
+    "source": "public record to 2026-11-14: the problem page, its proof-claims thread and the claimants' public artifacts, pinned in claim.yaml"
+   },
+   "audience": "briefing",
+   "title": "The claimed solution of Erdős Problem #731 (the least non-divisor of the central binomial coefficient)",
+   "kind": "audit",
+   "protocol_version": "0.1.0",
+   "claim_rule_met": false,
+   "label": "Erdős #731",
+   "area": "Number theory: binomial coefficients",
+   "rests_on": "an arXiv paper and a Lean development, under the claimant's own formalisation of the word 'reasonable'",
+   "pods": [
+    "DEBRIEF-math-erdos731"
+   ],
+   "began": "2026-11-14",
+   "status": "active",
+   "record_quality": "full_ledger",
+   "record_note": "Opened at tier zero: the claim and its artifacts are pinned, the gaps are drawn, nothing has been run or read by Nervous Machine.",
+   "record_limits": [
+    "Nothing in this record has been checked by Nervous Machine or by anyone independent of the claimants; every item is an open gap."
+   ],
+   "scope_limits": [
+    "Nervous Machine keeps score of the checks; it does not check the mathematics line by line.",
+    "Public record through 2026-11-14."
+   ],
+   "opening": {
+    "spoken": "This record covers the claimed solution of Erdős problem #731: what has been claimed, what it rests on, and what would have to be checked by whom."
+   },
+   "short_version": {
+    "spoken": "Erdős, Graham, Ruzsa and Straus asked for a reasonable function f(n) such that, for almost all n, the least m not dividing the central binomial coefficient is asymptotic to f(n). In June 2026 Eric Li posted a paper, and in July a Lean development, resolving the problem under an explicit dyadic-regularity reading of 'reasonable': a best deterministic scale exists for tightness in density, and no dyadically regular f gives the asymptotic equivalence asked for. Whether that reading answers the problem as posed is a judgment a number theorist has to make. Everything here is open."
+   },
+   "what_happened": {
+    "spoken": "The claim was pinned from the public record: the problem page, the proof-claims thread, and every artifact the claimants made public, by commit or hash. Nothing was run. The gaps that follow are the checks still owed."
+   },
+   "implications": {
+    "rely_on": [],
+    "do_not_rely_on": [
+     {
+      "spoken": "the claimed solution as settled; nothing in it has standing yet",
+      "finding_ids": []
+     }
+    ],
+    "stop": [],
+    "new": []
+   },
+   "certainty_statement": {
+    "spoken": "Nothing is certified or accepted. Every item is open."
+   },
+   "sources": [
+    {
+     "kind": "problem",
+     "ref": "https://www.erdosproblems.com/731"
+    },
+    {
+     "kind": "arxiv",
+     "ref": "arXiv:2606.29062v2 \"A Resolution of Erdős Problem 731 under Dyadic Regularity\" (published 2026-06-27, last revised 2026-07-26)"
+    },
+    {
+     "kind": "repo",
+     "ref": "github.com/ericlisg/erdos731 at commit cb1b58c88bf639bb87664dd96ffc327c305e160e (2026-07-26); licence Apache-2.0; 130 Lean files; has a lakefile"
+    },
+    {
+     "kind": "formal statement (third party)",
+     "ref": "github.com/google-deepmind/formal-conjectures FormalConjectures/ErdosProblems/731.lean at e028240a61822d970c933f4656f51da025cf200b"
+    }
+   ]
+  }
+ ],
+ "cycles": [
+  {
+   "schema_version": "nm-debrief-v1",
+   "created_by": "DEBRIEF/tools/new_mission.py",
+   "created_at": "2026-11-14T20:49:24Z",
+   "mission_id": "erdos731-2026-11",
+   "pod": "DEBRIEF-math-erdos731",
+   "provenance": {
+    "source": "public record to 2026-11-14: the problem page, its proof-claims thread and the claimants' public artifacts, pinned in claim.yaml"
+   },
+   "audience": "briefing",
+   "cycle": 0,
+   "dated": "2026-06-27 to 2026-11-14",
+   "kind": "replay",
+   "preregistered": {
+    "question": "What is on the public record about this claim?",
+    "rule": "no look-ahead; each event dated by its first public posting; artifacts pinned by commit or hash",
+    "predictions": [],
+    "commit": null,
+    "before_data": false
+   },
+   "outcome": {
+    "verdict": "admitted",
+    "numbers": {
+     "claims": 1,
+     "artifacts": 2
+    }
+   },
+   "spoken": "Eric Li posted the paper on arXiv; the Erdős-problems AI wiki listed it as a candidate full solution, marked unverified, on June 27. The proof claim was listed on the problem page with links to the paper and a formalisation. The Lean repository's current commit and the paper's second version were posted the same day. The problem page lists one proof claim, not marked accepted by the site.",
+   "finding_ids": [],
+   "gap_ids": [
+    "EG1",
+    "EG2",
+    "EG3",
+    "EG4"
+   ]
+  }
+ ],
+ "findings": [],
+ "gaps": [
+  {
+   "schema_version": "nm-debrief-v1",
+   "created_by": "DEBRIEF/tools/new_mission.py",
+   "created_at": "2026-11-14T20:49:24Z",
+   "mission_id": "erdos731-2026-11",
+   "pod": "DEBRIEF-math-erdos731",
+   "provenance": {
+    "source": "public record to 2026-11-14: the problem page, its proof-claims thread and the claimants' public artifacts, pinned in claim.yaml"
+   },
+   "audience": "briefing",
+   "gap_id": "EG1",
+   "title": "The Lean development has not been built or kernel-checked by anyone outside the claimant",
+   "status": "proposed",
+   "opened_cycle": 0,
+   "priority": 1,
+   "history": [],
+   "closes_with": [
+    {
+     "what": "a pre-registered rerun: fetch at the pinned commit, build, confirm no sorry or admit, print the axioms",
+     "kind": "rerun",
+     "external": true,
+     "who_could_act": "anyone with a machine and a few hours"
+    }
+   ],
+   "spoken": "The claimant reports a Lean development that compiles with standard axioms only. Nobody outside the claimant has reported building it.",
+   "ask": {
+    "spoken": "A rerun of the Lean build on an independent machine, written down first."
+   },
+   "expected_signal": "a rerun cycle reporting build exit status, the sorry/admit scan and the axiom list for the main theorem",
+   "resolution_by": "none registered"
+  },
+  {
+   "schema_version": "nm-debrief-v1",
+   "created_by": "DEBRIEF/tools/new_mission.py",
+   "created_at": "2026-11-14T20:49:24Z",
+   "mission_id": "erdos731-2026-11",
+   "pod": "DEBRIEF-math-erdos731",
+   "provenance": {
+    "source": "public record to 2026-11-14: the problem page, its proof-claims thread and the claimants' public artifacts, pinned in claim.yaml"
+   },
+   "audience": "briefing",
+   "gap_id": "EG2",
+   "title": "Do the formal statements say what the problem asks?",
+   "status": "proposed",
+   "opened_cycle": 0,
+   "priority": 2,
+   "history": [],
+   "closes_with": [
+    {
+     "what": "a machine comparison of the claimant's main theorem with the third-party formal statement in google-deepmind/formal-conjectures, then a human read of any difference",
+     "kind": "trace",
+     "external": true,
+     "who_could_act": "anyone who can read Lean; the two statements are public"
+    },
+    {
+     "what": "two independent mathematicians read the formal statement against the problem as posed and sign, or refuse",
+     "kind": "read",
+     "external": true,
+     "who_could_act": "a mathematician in the problem's area, about an hour with a reading guide"
+    }
+   ],
+   "spoken": "A Lean check establishes that the formal statement follows from its hypotheses. Whether that formal statement is the problem Erdős posed is a separate question that a person has to answer. A third-party formalization of the problem statement exists, so part of this can be compared by machine.",
+   "ask": {
+    "spoken": "A reading of the formal statement against the problem as posed, by someone who did not write it."
+   },
+   "expected_signal": "a trace cycle and two signed read cycles, or a refusal naming the difference",
+   "resolution_by": "none registered"
+  },
+  {
+   "schema_version": "nm-debrief-v1",
+   "created_by": "DEBRIEF/tools/new_mission.py",
+   "created_at": "2026-11-14T20:49:24Z",
+   "mission_id": "erdos731-2026-11",
+   "pod": "DEBRIEF-math-erdos731",
+   "provenance": {
+    "source": "public record to 2026-11-14: the problem page, its proof-claims thread and the claimants' public artifacts, pinned in claim.yaml"
+   },
+   "audience": "briefing",
+   "gap_id": "EG3",
+   "title": "No independent mathematician has reported reading the proof, and there is no referee report",
+   "status": "proposed",
+   "opened_cycle": 0,
+   "priority": 3,
+   "history": [],
+   "closes_with": [
+    {
+     "what": "a read cycle by a mathematician in the area who is not an author, signing or refusing each main step",
+     "kind": "read",
+     "external": true,
+     "who_could_act": "a mathematician in the problem's area"
+    },
+    {
+     "what": "a referee report or journal acceptance, recorded by date",
+     "kind": "measurement",
+     "external": true,
+     "who_could_act": "a journal; the record notes the date when it happens"
+    }
+   ],
+   "spoken": "The claim is listed on the problem's page, which states that appearing there is no guarantee of correctness and that nobody associated with the site has examined it. No independent reading is on the public record.",
+   "ask": {
+    "spoken": "Someone in the field reads it and says, under their name, what holds and what does not."
+   },
+   "expected_signal": "a signed or refused read cycle; a dated referee report",
+   "resolution_by": "none registered"
+  },
+  {
+   "schema_version": "nm-debrief-v1",
+   "created_by": "DEBRIEF/tools/new_mission.py",
+   "created_at": "2026-11-14T20:49:24Z",
+   "mission_id": "erdos731-2026-11",
+   "pod": "DEBRIEF-math-erdos731",
+   "provenance": {
+    "source": "public record to 2026-11-14: the problem page, its proof-claims thread and the claimants' public artifacts, pinned in claim.yaml"
+   },
+   "audience": "briefing",
+   "gap_id": "EG4",
+   "title": "Does the chosen formalisation of 'reasonable' answer the problem as posed?",
+   "status": "proposed",
+   "opened_cycle": 0,
+   "priority": 4,
+   "history": [],
+   "closes_with": [
+    {
+     "what": "a number theorist reads the problem's source and the claim's definition and says, under their name, whether the resolved statement is the problem",
+     "kind": "read",
+     "external": true,
+     "who_could_act": "a number theorist familiar with the 1975 paper"
+    }
+   ],
+   "spoken": "The problem asks for a reasonable function. The claim fixes what reasonable means, dyadic regularity, and resolves that version in both directions. Whether that captures what the authors meant is a judgment for a number theorist, and it is separate from whether the proofs are correct.",
+   "ask": {
+    "spoken": "a number theorist reads the problem's source and the claim's definition and says, under their name, whether the resolved statement is the problem"
+   },
+   "expected_signal": "a signed or refused read cycle naming the definition",
+   "resolution_by": "none registered"
+  }
+ ],
+ "anomalies": [],
+ "background": [
+  {
+   "schema_version": "nm-debrief-v1",
+   "created_by": "DEBRIEF/tools/new_mission.py",
+   "created_at": "2026-11-14T20:49:24Z",
+   "mission_id": "erdos731-2026-11",
+   "pod": "DEBRIEF-math-erdos731",
+   "provenance": {
+    "source": "public record to 2026-11-14: the problem page, its proof-claims thread and the claimants' public artifacts, pinned in claim.yaml"
+   },
+   "audience": "briefing",
+   "term": "Erdős Problem #731",
+   "spoken": "For an integer n let A(n) be the least m that does not divide the central binomial coefficient (2n choose n). The authors say it is not hard to show that for almost all n, A(n) is exp((log n)^(1/2 + o(1))). The problem asks for a reasonable function f(n) with A(n) asymptotic to f(n) for almost all n.",
+   "source": "https://www.erdosproblems.com/731"
+  },
+  {
+   "schema_version": "nm-debrief-v1",
+   "created_by": "DEBRIEF/tools/new_mission.py",
+   "created_at": "2026-11-14T20:49:24Z",
+   "mission_id": "erdos731-2026-11",
+   "pod": "DEBRIEF-math-erdos731",
+   "provenance": {
+    "source": "public record to 2026-11-14: the problem page, its proof-claims thread and the claimants' public artifacts, pinned in claim.yaml"
+   },
+   "audience": "briefing",
+   "term": "Proof claims on erdosproblems.com",
+   "spoken": "The site lets anyone list a claimed proof. Its own text says that appearing there is no guarantee of correctness and does not mean anyone associated with the site has examined it. A listed claim is where checking starts, not where it ends.",
+   "source": "https://www.erdosproblems.com/forum/thread/731/proof-claims"
+  },
+  {
+   "schema_version": "nm-debrief-v1",
+   "created_by": "DEBRIEF/tools/new_mission.py",
+   "created_at": "2026-11-14T20:49:24Z",
+   "mission_id": "erdos731-2026-11",
+   "pod": "DEBRIEF-math-erdos731",
+   "provenance": {
+    "source": "public record to 2026-11-14: the problem page, its proof-claims thread and the claimants' public artifacts, pinned in claim.yaml"
+   },
+   "audience": "briefing",
+   "term": "The claim by Eric Li",
+   "spoken": "The claim resolves the problem under an explicit dyadic-regularity formalisation of 'reasonable'. On each dyadic block it gives a scale F and proves two-sided tail bounds in natural density around it, so that log A(n) minus the main terms is tight in density, while no dyadically regular deterministic scale satisfies the requested asymptotic equivalence. The author presents this as a two-part answer: F is the best possible deterministic scale, and the equivalence as literally asked cannot hold for any dyadically regular f.",
+   "source": "https://www.erdosproblems.com/forum/thread/731/proof-claims"
+  }
+ ],
+ "sessions": []
+}
