@@ -19,6 +19,7 @@ Record quality: full ledger. Opened at tier zero on 2026-11-14: the claim and it
 |---|---|---|---|---|---|
 | 0 | 2026-06-27 to 2026-11-14 |  | replay | no | admitted |
 | 1 | 2026-11-17 | Nervous Machine (Heidi Bennett; Claude Code as the operating agent) | trace | yes | confirmed |
+| external-2026-11-17 | 2026-11-17 | None | replay | no | admitted |
 
 ## Gaps, in the order that would settle things fastest
 
