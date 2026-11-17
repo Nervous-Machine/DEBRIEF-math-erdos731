@@ -1,0 +1,81 @@
+# Pre-registration, cycle 1: a definitional trace (reading guide) of the claimant's formal statements of Erdős Problem
+# #731 and of the third-party formal statement, for human semantic review. Written 2026-11-17 at tier zero (nothing run
+# or read before), and BEFORE reading the claimant's definition files, the formal-conjectures utility definitions or the
+# Mathlib definitions behind either statement, and before writing any rendering. Changes after this point go in an
+# amendment at the end.
+mission: DEBRIEF-math-erdos731
+cycle: 1
+dated: "2026-11-17"
+by: "Nervous Machine (Heidi Bennett; Claude Code as the operating agent)"
+question: >
+  Can the two open semantic gaps (EG2: do the formal statements say what the problem asks? EG4: does the claimant's
+  formalisation of 'reasonable', dyadic regularity, answer the problem as posed?) be made cheaper for a human reviewer,
+  by laying out the problem as posed, the third-party formal statement, the claimant's headline statements, every
+  definition they depend on down to Mathlib, a plain rendering of each, and the specific points a mathematician has to
+  confirm? And is there a difference that could change the meaning beyond the one the claimant discloses?
+what_this_cycle_is:
+  - "An aid for review: trace/DEFINITIONAL-TRACE.md, plus cycles/trace-1/Trace.lean, a file of small worked examples and
+     #print/#check commands written for a later run inside the built development."
+  - "The renderings are the operating agent's reading of Lean and Mathlib source fetched by pinned commit. They are a
+     reading, not a check."
+what_this_cycle_is_not:
+  - "Not an independent human semantic review. EG2 and EG4 stay open after this cycle whatever the trace says; the trace
+     moves no standing."
+  - "Not a build. The claimant's development has not been built by Nervous Machine (EG1 is open), so nothing here is
+     printed by Lean: statements are quoted from source files at the pinned commit, and the worked examples are written,
+     not run. No claimant code is executed."
+  - "It does not read or judge the paper's argument (EG3)."
+rules:
+  R1: "Every Lean statement is quoted verbatim from a source file fetched read-only by pinned commit: the claimant's
+       repository at cb1b58c8, the formal-conjectures file at e028240a (blob 1ca01c40), and the Mathlib revision named in
+       the claimant's lake-manifest.json, with file and line. Where the claimant's README quotes a statement, the quote
+       is compared with the source file and any difference is recorded."
+  R2: "Each rendering is marked as the agent's reading. Where the agent is unsure what a definition means, it says so."
+  R3: "Any place where a formal statement and the problem as posed differ in a way the agent can see is recorded as a
+       discrepancy whether or not it looks harmless. A difference the claimant does not disclose that could change the
+       meaning is opened as an anomaly in the ledger. The claimant's disclosed choice of dyadic regularity for
+       'reasonable' is already gap EG4; it is recorded and sharpened, not opened again as an anomaly."
+  R4: "Worked examples are written as Lean commands for a later kernel run. Until that run, the trace states plainly that
+       they are unrun and claims no result from them; a value the agent computes by hand is marked as the agent's."
+observed_before_this_prereg:
+  - "The problem page (erdosproblems.com/731, last edited 19 October 2025): 'Find some reasonable function f(n) such that,
+     for almost all integers n, the least integer m such that m ∤ (2n choose n) satisfies m ~ f(n).' EGRS say it is 'not
+     hard to show' that m = exp((log n)^(1/2+o(1))) for almost all n. The discussion thread (nine comments) includes a
+     heuristic, posted 26 April 2026, giving the scale sqrt2 (log 2)^(1/4) (log x)^(1/4) exp(sqrt((log 2) log x)) and
+     suggesting no f with A(n) ~ f(n) for almost all n exists. The proof-claim entry (Eric Li, 2026-07-17) says the claim
+     resolves the problem 'under the explicit dyadic-regularity formalization of reasonable' and adds that 'what dyadic
+     regularity excludes is also exactly what the word reasonable is meant to exclude'."
+  - "The formal-conjectures file at the pinned commit (read in full): leastNonDivisor n := sInf {m | 0 < m ∧ ¬ m ∣
+     n.centralBinom}; an answer function erdos_731.answer : ℕ → ℝ := sorry; theorem erdos_731 : ∀ ε > 0, {n | |A n /
+     answer n - 1| < ε}.HasDensity 1, tagged 'research open, question value'; and a solved variant egrs75. 'Reasonable'
+     does not appear in the formal statement; it lives only in the docstring."
+  - "The claimant's README at the pinned commit (read in full), including its 'Statement audit' section quoting the
+     headline theorems no_dyadically_regular_equivalent_unconditional and global_density_tight_unconditional and the
+     definitions A, calF, F, dyadicRegular, Odens, tendstoOneInDensity, MesoscopicTailBounds. The source files Defs.lean,
+     Final.lean, Main.lean, Erdos731.lean, Verify.lean and lake-manifest.json have been downloaded but not opened."
+predictions:
+  P1: "The claimant's A is the same function as formal-conjectures' leastNonDivisor (m = 0 excluded), and its
+       tendstoOneInDensity is formal-conjectures' 'for every ε the set where |A/f - 1| < ε has density 1', up to a strict
+       versus non-strict inequality at ε that does not matter because ε is arbitrary. If the claimant's A turns out to
+       admit m = 0, that is an undisclosed meaning change and opens an anomaly."
+  P2: "The formal-conjectures statement cannot serve as a machine reference for this claim: it leaves 'reasonable' out of
+       the formal text (with answer := leastNonDivisor the formal statement holds trivially) and its form presupposes a
+       positive answer, while the claim's headline is a negative theorem about a restricted class. So EG2 reduces to
+       reading the claimant's own statements, and the meaning question concentrates in EG4."
+  P3: "The content-affecting question will be the class. Dyadic regularity asks that log f vary by o(1) across each block
+       [X, 2X). The agent expects functions a reader might call reasonable to fall outside it (for example n^α, or a
+       smooth F(n)(2 + sin(2π log₂ n)), whose logarithm moves by a bounded nonzero amount across a block), so that the
+       negative theorem says nothing about them. Whether that matters is a judgment for a number theorist; the agent
+       expects to rate it 'uncertain, possibly meaning-changing', record it against EG4, and not open an anomaly for it,
+       because the claimant discloses the choice."
+  P4: "At least three boundary conventions need a sentence (candidates: A(0), Real.log at 0 and 1 for small n, F(n) = 1
+       for n ≤ 1, the requirement f > 0 everywhere, density over range N starting at 0, blocks [X, 2X) for every integer X
+       rather than powers of 2); none changes the meaning."
+  P5: "The positive half (global_density_tight) is weaker than an asymptotic: it says log A(n) = sqrt((log 2) log n) +
+       (1/4) log log n + O(1) outside sets of small upper density, i.e. A(n) is within a bounded factor of the scale for
+       most n. It does not supply an f with A ~ f, and the trace will say so."
+standing_consequences:
+  any_outcome: "EG2 and EG4 remain open. EG2's ask changes from 'read the formal statement' to 'read the trace and sign or
+                refuse each checklist item'; EG4's ask names the checklist item that carries the class question."
+  discrepancy_found: "An undisclosed difference that could change the meaning opens an anomaly naming it, the same day.
+                      There are no findings on this record yet, so no finding note is rewritten."
