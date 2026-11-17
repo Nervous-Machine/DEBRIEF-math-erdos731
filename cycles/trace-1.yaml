@@ -1,0 +1,48 @@
+# Cycle 1: a definitional trace (reading guide) of the formal statements, for human semantic review.
+# Pre-registered in prereg_trace.yaml (hashed 2026-11-17T18:06:38Z, committed alone) before the definitions were read.
+kind: trace
+cycle: 1
+dated: "2026-11-17"
+by: "Nervous Machine (Heidi Bennett; Claude Code as the operating agent)"
+not_an_author_of_the_claim: true
+preregistered:
+  commit: "prereg_trace.yaml"
+  results: ["trace/DEFINITIONAL-TRACE.md", "cycles/trace-1/Trace.lean"]
+  question: "Can the open semantic gaps (EG2, and EG4 on the formalisation of 'reasonable') be made cheaper for a human reviewer: the problem as posed, the third-party and the claimant's formal statements, every definition behind them, a plain rendering, and the points to confirm? Is there a meaning-changing difference beyond the one the claimant discloses?"
+  rule: "Statements quoted verbatim from files fetched read-only at the pinned commits, with file and line; renderings marked as the agent's; every discrepancy recorded whether harmless or not, an undisclosed meaning-changing one opened as an anomaly; worked examples written for Lean and stated as unrun until run; standing unchanged by construction."
+  predictions:
+    - "P1: the claimant's A is formal-conjectures' leastNonDivisor (m = 0 excluded) and its density notion is the standard one"
+    - "P2: the formal-conjectures statement cannot serve as a machine reference (no condition on the answer, positive form); the meaning question concentrates in EG4"
+    - "P3: dyadic regularity leaves out functions a reader might call reasonable, whose logarithm moves by a bounded amount within a block; rated uncertain, recorded against EG4, no anomaly since disclosed"
+    - "P4: at least three boundary conventions need a sentence; none changes the meaning"
+    - "P5: the positive half is tightness in density, weaker than an asymptotic, and supplies no f with A ~ f"
+  before_data: true
+outcome:
+  verdict: confirmed
+  numbers:
+    statements_traced: 4
+    pieces_traced: 16
+    definitions_cited: 27
+    worked_examples_written: 17
+    worked_examples_checked_by_lean: 0
+    discrepancies_recorded: 9
+    content_affecting_discrepancies_seen_by_agent: 1
+    anomalies_opened: 0
+    human_review: false
+    checklist_items: 6
+  misses:
+    - "P3 named n^α as an excluded reasonable function; it is beside the point, since A(n) = exp((log n)^(1/2+o(1))) for almost all n and no power of n could be an equivalent. The excluded functions that matter are F(n) times a bounded swing inside each block."
+    - "Not foreseen: the development also proves inherited oscillation (any working f must swing by a fixed factor inside every block), which narrows the open question to smooth swinging functions."
+spoken: >-
+  Nervous Machine wrote the reading guide for the question on this record that a machine cannot settle: whether the
+  claim's Lean statements answer the problem Erdős, Graham, Ruzsa and Straus posed. The third-party formal statement
+  turned out not to be usable as a reference, because it places no condition on the answer, so the guide reads the
+  claimant's own statements against the problem page, traces every symbol to its definition with file and line, and
+  writes seventeen small Lean examples that have not yet been run, since nobody has built the development. The least
+  non-divisor and the density notion are the problem's own. One difference could change what the claim answers, and
+  the claimant states it openly: the word reasonable is taken to mean a function whose logarithm is nearly constant on
+  each doubling block, which leaves out smooth functions that swing by a fixed factor inside a block. The readings are
+  the system's, not a mathematician's, so nothing changed standing. A number theorist can now sign or refuse five
+  lines, one of which is that single judgment.
+finding_ids: []
+gap_ids: ["EG2", "EG4"]

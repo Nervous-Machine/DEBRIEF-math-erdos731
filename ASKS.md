@@ -16,12 +16,12 @@ Signal expected: a rerun cycle reporting build exit status, the sorry/admit scan
 
 A Lean check establishes that the formal statement follows from its hypotheses. Whether that formal statement is the problem Erdős posed is a separate question that a person has to answer. A third-party formalization of the problem statement exists, so part of this can be compared by machine.
 
-Status: proposed.
+Status: in cycle.
 
 - **a machine comparison of the claimant's main theorem with the third-party formal statement in google-deepmind/formal-conjectures, then a human read of any difference** — contribution kind: trace (a reading guide); who could act: anyone who can read Lean; the two statements are public.
 - **two independent mathematicians read the formal statement against the problem as posed and sign, or refuse** — contribution kind: read; who could act: a mathematician in the problem's area, about an hour with a reading guide.
 
-Signal expected: a trace cycle and two signed read cycles, or a refusal naming the difference. Resolution by: none registered.
+Signal expected: two signed read cycles with no refusal, or a refusal naming the line and the difference. Resolution by: none registered.
 
 ## 3. No independent mathematician has reported reading the proof, and there is no referee report (ledger id EG3)
 
@@ -38,8 +38,8 @@ Signal expected: a signed or refused read cycle; a dated referee report. Resolut
 
 The problem asks for a reasonable function. The claim fixes what reasonable means, dyadic regularity, and resolves that version in both directions. Whether that captures what the authors meant is a judgment for a number theorist, and it is separate from whether the proofs are correct.
 
-Status: proposed.
+Status: in cycle.
 
 - **a number theorist reads the problem's source and the claim's definition and says, under their name, whether the resolved statement is the problem** — contribution kind: read; who could act: a number theorist familiar with the 1975 paper.
 
-Signal expected: a signed or refused read cycle naming the definition. Resolution by: none registered.
+Signal expected: two signed read cycles on A4 and A5 with no refusal, or a refusal naming a reasonable function outside the class. Resolution by: none registered.

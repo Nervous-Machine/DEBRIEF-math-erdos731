@@ -23,13 +23,13 @@
    "began": "2026-11-14",
    "status": "active",
    "record_quality": "full_ledger",
-   "record_note": "Opened at tier zero: the claim and its artifacts are pinned, the gaps are drawn, nothing has been run or read by Nervous Machine.",
+   "record_note": "Opened at tier zero on 2026-11-14: the claim and its artifacts pinned, the gaps drawn. Cycle 1, on 2026-11-17: the reading guide for the semantic questions, written from source files at the pinned commits; nothing has been built or run by Nervous Machine.",
    "record_limits": [
-    "Nothing in this record has been checked by Nervous Machine or by anyone independent of the claimants; every item is an open gap."
+    "Nothing in this record has been checked by Nervous Machine or by anyone independent of the claimants. The Lean development has not been built outside the claimant; the reading guide's Lean examples are written but not run."
    ],
    "scope_limits": [
     "Nervous Machine keeps score of the checks; it does not check the mathematics line by line.",
-    "Public record through 2026-11-14."
+    "Public record through 2026-11-17."
    ],
    "opening": {
     "spoken": "This record covers the claimed solution of Erdős problem #731: what has been claimed, what it rests on, and what would have to be checked by whom."
@@ -38,7 +38,7 @@
     "spoken": "Erdős, Graham, Ruzsa and Straus asked for a reasonable function f(n) such that, for almost all n, the least m not dividing the central binomial coefficient is asymptotic to f(n). In June 2026 Eric Li posted a paper, and in July a Lean development, resolving the problem under an explicit dyadic-regularity reading of 'reasonable': a best deterministic scale exists for tightness in density, and no dyadically regular f gives the asymptotic equivalence asked for. Whether that reading answers the problem as posed is a judgment a number theorist has to make. Everything here is open."
    },
    "what_happened": {
-    "spoken": "The claim was pinned from the public record: the problem page, the proof-claims thread, and every artifact the claimants made public, by commit or hash. Nothing was run. The gaps that follow are the checks still owed."
+    "spoken": "The claim was pinned from the public record: the problem page, the proof-claims thread, and every artifact the claimants made public, by commit or hash. Nothing was run. A reading guide now lays the claimant's formal statements beside the problem as posed, definition by definition. It finds that the least non-divisor and the density notion are the problem's own, that the third-party formal statement places no condition on the answer and so cannot serve as a reference, and that one difference could change what the claim answers: the claimant's own, openly stated reading of the word reasonable."
    },
    "implications": {
     "rely_on": [],
@@ -110,6 +110,64 @@
     "EG3",
     "EG4"
    ]
+  },
+  {
+   "schema_version": "nm-debrief-v1",
+   "mission_id": "erdos731-2026-11",
+   "pod": "DEBRIEF-math-erdos731",
+   "created_by": "contributed cycle (merge_cycles.py)",
+   "created_at": "2026-11-17T18:12:45Z",
+   "provenance": {
+    "source": "contributed cycle file trace-1.yaml"
+   },
+   "audience": "briefing",
+   "kind": "trace",
+   "cycle": 1,
+   "dated": "2026-11-17",
+   "by": "Nervous Machine (Heidi Bennett; Claude Code as the operating agent)",
+   "not_an_author_of_the_claim": true,
+   "preregistered": {
+    "commit": "prereg_trace.yaml",
+    "results": [
+     "trace/DEFINITIONAL-TRACE.md",
+     "cycles/trace-1/Trace.lean"
+    ],
+    "question": "Can the open semantic gaps (EG2, and EG4 on the formalisation of 'reasonable') be made cheaper for a human reviewer: the problem as posed, the third-party and the claimant's formal statements, every definition behind them, a plain rendering, and the points to confirm? Is there a meaning-changing difference beyond the one the claimant discloses?",
+    "rule": "Statements quoted verbatim from files fetched read-only at the pinned commits, with file and line; renderings marked as the agent's; every discrepancy recorded whether harmless or not, an undisclosed meaning-changing one opened as an anomaly; worked examples written for Lean and stated as unrun until run; standing unchanged by construction.",
+    "predictions": [
+     "P1: the claimant's A is formal-conjectures' leastNonDivisor (m = 0 excluded) and its density notion is the standard one",
+     "P2: the formal-conjectures statement cannot serve as a machine reference (no condition on the answer, positive form); the meaning question concentrates in EG4",
+     "P3: dyadic regularity leaves out functions a reader might call reasonable, whose logarithm moves by a bounded amount within a block; rated uncertain, recorded against EG4, no anomaly since disclosed",
+     "P4: at least three boundary conventions need a sentence; none changes the meaning",
+     "P5: the positive half is tightness in density, weaker than an asymptotic, and supplies no f with A ~ f"
+    ],
+    "before_data": true
+   },
+   "outcome": {
+    "verdict": "confirmed",
+    "numbers": {
+     "statements_traced": 4,
+     "pieces_traced": 16,
+     "definitions_cited": 27,
+     "worked_examples_written": 17,
+     "worked_examples_checked_by_lean": 0,
+     "discrepancies_recorded": 9,
+     "content_affecting_discrepancies_seen_by_agent": 1,
+     "anomalies_opened": 0,
+     "human_review": false,
+     "checklist_items": 6
+    },
+    "misses": [
+     "P3 named n^α as an excluded reasonable function; it is beside the point, since A(n) = exp((log n)^(1/2+o(1))) for almost all n and no power of n could be an equivalent. The excluded functions that matter are F(n) times a bounded swing inside each block.",
+     "Not foreseen: the development also proves inherited oscillation (any working f must swing by a fixed factor inside every block), which narrows the open question to smooth swinging functions."
+    ]
+   },
+   "spoken": "Nervous Machine wrote the reading guide for the question on this record that a machine cannot settle: whether the claim's Lean statements answer the problem Erdős, Graham, Ruzsa and Straus posed. The third-party formal statement turned out not to be usable as a reference, because it places no condition on the answer, so the guide reads the claimant's own statements against the problem page, traces every symbol to its definition with file and line, and writes seventeen small Lean examples that have not yet been run, since nobody has built the development. The least non-divisor and the density notion are the problem's own. One difference could change what the claim answers, and the claimant states it openly: the word reasonable is taken to mean a function whose logarithm is nearly constant on each doubling block, which leaves out smooth functions that swing by a fixed factor inside a block. The readings are the system's, not a mathematician's, so nothing changed standing. A number theorist can now sign or refuse five lines, one of which is that single judgment.",
+   "finding_ids": [],
+   "gap_ids": [
+    "EG2",
+    "EG4"
+   ]
   }
  ],
  "findings": [],
@@ -157,10 +215,17 @@
    "audience": "briefing",
    "gap_id": "EG2",
    "title": "Do the formal statements say what the problem asks?",
-   "status": "proposed",
+   "status": "in_cycle",
    "opened_cycle": 0,
    "priority": 2,
-   "history": [],
+   "history": [
+    {
+     "cycle": 1,
+     "hypothesis": "a definitional trace makes the human read cheap",
+     "before_data": true,
+     "result": "trace/DEFINITIONAL-TRACE.md written: four statements, sixteen pieces traced to the claimant's definitions, formal-conjectures and Mathlib; the claimant's least non-divisor and density notion match the problem's; the formal-conjectures statement places no condition on the answer and cannot be the machine reference (D6); seventeen Lean examples written, none yet run; nine discrepancies recorded, none undisclosed; status proposed -> in_cycle, the ask is now to sign or refuse checklist lines A1 to A3"
+    }
+   ],
    "closes_with": [
     {
      "what": "a machine comparison of the claimant's main theorem with the third-party formal statement in google-deepmind/formal-conjectures, then a human read of any difference",
@@ -177,9 +242,9 @@
    ],
    "spoken": "A Lean check establishes that the formal statement follows from its hypotheses. Whether that formal statement is the problem Erdős posed is a separate question that a person has to answer. A third-party formalization of the problem statement exists, so part of this can be compared by machine.",
    "ask": {
-    "spoken": "A reading of the formal statement against the problem as posed, by someone who did not write it."
+    "spoken": "A mathematician who is not an author reads trace/DEFINITIONAL-TRACE.md against the claimant's statements and the problem page and signs or refuses checklist lines A1 to A3, in about half an hour. Two independent signatures close this gap."
    },
-   "expected_signal": "a trace cycle and two signed read cycles, or a refusal naming the difference",
+   "expected_signal": "two signed read cycles with no refusal, or a refusal naming the line and the difference",
    "resolution_by": "none registered"
   },
   {
@@ -231,10 +296,17 @@
    "audience": "briefing",
    "gap_id": "EG4",
    "title": "Does the chosen formalisation of 'reasonable' answer the problem as posed?",
-   "status": "proposed",
+   "status": "in_cycle",
    "opened_cycle": 0,
    "priority": 4,
-   "history": [],
+   "history": [
+    {
+     "cycle": 1,
+     "hypothesis": "the claimant's dyadic-regularity reading of 'reasonable' can be put to a reviewer as one question",
+     "before_data": true,
+     "result": "the trace's D1: dyadic regularity leaves out smooth functions whose logarithm swings by a bounded amount inside each block [X, 2X), for example F(n)(2 + sin(2π log₂ n)); the development's inherited-oscillation result shows any working f must swing that way, but not that a smooth swinging f fails. Rated uncertain and possibly meaning-changing by the agent; disclosed by the claimant, so no anomaly; status proposed -> in_cycle, the ask is now checklist lines A4 and A5"
+    }
+   ],
    "closes_with": [
     {
      "what": "a number theorist reads the problem's source and the claim's definition and says, under their name, whether the resolved statement is the problem",
@@ -245,9 +317,9 @@
    ],
    "spoken": "The problem asks for a reasonable function. The claim fixes what reasonable means, dyadic regularity, and resolves that version in both directions. Whether that captures what the authors meant is a judgment for a number theorist, and it is separate from whether the proofs are correct.",
    "ask": {
-    "spoken": "a number theorist reads the problem's source and the claim's definition and says, under their name, whether the resolved statement is the problem"
+    "spoken": "A number theorist reads Part E and checklist lines A4 and A5 of trace/DEFINITIONAL-TRACE.md and answers one question under their name: would you count a function that swings by a fixed factor inside every block from X to 2X, such as F(n) times 2 plus sine of 2 pi log base 2 of n, as reasonable; and if so, does the paper's argument extend routinely to short windows to rule it out? Two independent signatures close this gap; a refusal names the function."
    },
-   "expected_signal": "a signed or refused read cycle naming the definition",
+   "expected_signal": "two signed read cycles on A4 and A5 with no refusal, or a refusal naming a reasonable function outside the class",
    "resolution_by": "none registered"
   }
  ],
