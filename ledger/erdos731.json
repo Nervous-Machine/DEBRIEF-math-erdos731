@@ -71,6 +71,30 @@
      "kind": "formal statement (third party)",
      "ref": "github.com/google-deepmind/formal-conjectures FormalConjectures/ErdosProblems/731.lean at e028240a61822d970c933f4656f51da025cf200b"
     }
+   ],
+   "tooling": [
+    {
+     "by": "Eric Li",
+     "tier": "subscription-pro",
+     "basis": "stated by the claimant: GPT-5.5 Pro, a model of the ChatGPT Pro, Business and Enterprise tiers",
+     "models": [
+      {
+       "model": "GPT-5.5 Pro",
+       "id": "gpt-5-5-pro",
+       "vendor": "OpenAI",
+       "public_release": "2026-04-23",
+       "tiers_at_release": [
+        "subscription-pro"
+       ],
+       "public_at_the_time": "yes"
+      }
+     ],
+     "work": {
+      "to": "2026-07-17"
+     },
+     "duration": "not stated",
+     "compute": "not stated"
+    }
    ]
   }
  ],

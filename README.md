@@ -17,6 +17,7 @@ This claim is on the public claims board, https://math-board.nervousmachine.com,
 | read by a person | nobody yet; [reading guide](trace/DEFINITIONAL-TRACE.md) |
 | elsewhere | [DeepMind formal-conjectures](https://github.com/google-deepmind/formal-conjectures/blob/6751c0f043985ac6647db28a45a63afdf21acffe/FormalConjectures/ErdosProblems/731.lean): open; 1975 variant solved · [erdosproblems.com](https://www.erdosproblems.com/): open |
 | related | same claimant: [Erdős #1177](https://github.com/Nervous-Machine/DEBRIEF-math-erdos1177), [Erdős #550](https://github.com/Nervous-Machine/DEBRIEF-math-erdos550), [Erdős #593](https://github.com/Nervous-Machine/DEBRIEF-math-erdos593), [Erdős #768](https://github.com/Nervous-Machine/DEBRIEF-math-erdos768) |
+| tooling | GPT-5.5 Pro · tier: subscription-pro (stated by the claimant: GPT-5.5 Pro, a model of the ChatGPT Pro, Business and Enterprise tiers) |
 
 Rendered from `ledger/` at regeneration; the full record is `SCORECARD.md`, what is owed is `ASKS.md`. Standing words: nothing has standing yet.
 <!-- standing:end -->
