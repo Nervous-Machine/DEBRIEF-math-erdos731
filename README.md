@@ -4,7 +4,22 @@ A DEBRIEF mission record (protocol https://github.com/Nervous-Machine/DEBRIEF) f
 
 This claim is on the public claims board, https://math-board.nervousmachine.com, which shows its stage, who has contributed, and what it needs next.
 
-**Standing.** Certified 0. Accepted 0. Refuted 0. Open gaps 4. The claim and its public artifacts are pinned and the checks still owed are listed. Nothing has been built or run. Cycle 1 (2026-11-17) is a reading guide for the semantic questions, `trace/DEFINITIONAL-TRACE.md`; it changes no standing.
+<!-- standing:begin -->
+**Standing, 17 Nov 2026.** Stage: Reading guide written. Needs next: The Lean development has not been built or kernel-checked by anyone outside the claimant ([what would close it](ASKS.md)).
+
+| certified | accepted | refuted | open gaps | cycles filed | last cycle |
+|---|---|---|---|---|---|
+| 0 | 0 | 0 | 4 | 1 | 17 Nov 2026 |
+
+| | |
+|---|---|
+| checked by machine | nobody yet |
+| read by a person | nobody yet; [reading guide](trace/DEFINITIONAL-TRACE.md) |
+| elsewhere | [DeepMind formal-conjectures](https://github.com/google-deepmind/formal-conjectures/blob/6751c0f043985ac6647db28a45a63afdf21acffe/FormalConjectures/ErdosProblems/731.lean): open; 1975 variant solved · [erdosproblems.com](https://www.erdosproblems.com/): open |
+| related | [Erdős #1177](https://github.com/Nervous-Machine/DEBRIEF-math-erdos1177): same claimant · [Erdős #550](https://github.com/Nervous-Machine/DEBRIEF-math-erdos550): same claimant · [Erdős #593](https://github.com/Nervous-Machine/DEBRIEF-math-erdos593): same claimant · [Erdős #768](https://github.com/Nervous-Machine/DEBRIEF-math-erdos768): same claimant |
+
+Rendered from `ledger/` at regeneration; the full record is `SCORECARD.md`, what is owed is `ASKS.md`. Standing words: nothing has standing yet.
+<!-- standing:end -->
 
 ## The problem
 
